@@ -1,0 +1,1859 @@
+<!DOCTYPE html>
+<html lang="sd">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مالهي گوٺ فلاح ڪميٽي | مالہی گوٹھ فلاحی کمیٹی</title>
+<meta name="description" content="مالهي گوٺ فلاح ڪميٽي — مالهي گوٺ ڳوٺ جي خدمت لاءِ ڪميونٽي-چلندڙ فلاح واري شروعات.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --forest: #0f2318;
+  --forest-mid: #1a3a28;
+  --green: #2a5c40;
+  --green-light: #3d8b5f;
+  --sage: #7db99a;
+  --gold: #c8922a;
+  --gold-light: #e8b84b;
+  --cream: #f8f3e8;
+  --cream-2: #f0e8d5;
+  --warm-white: #fdfaf4;
+  --text: #1a1a16;
+  --text-mid: #444438;
+  --text-soft: #7a7a6e;
+  --white: #ffffff;
+  --radius: 3px;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--warm-white);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* ═══════════════════════════════
+   NAVBAR
+═══════════════════════════════ */
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 999;
+  background: rgba(15,35,24,0.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(200,146,42,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 64px;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.nav-logo {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+}
+
+.nav-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.2;
+}
+
+.nav-name span {
+  display: block;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.18em;
+  color: var(--gold-light);
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { color: var(--gold-light); }
+
+.nav-cta {
+  background: var(--gold) !important;
+  color: var(--forest) !important;
+  padding: 8px 18px;
+  border-radius: var(--radius);
+  font-weight: 500 !important;
+  transition: background 0.2s !important;
+}
+
+.nav-cta:hover { background: var(--gold-light) !important; }
+
+/* ═══════════════════════════════
+   HERO
+═══════════════════════════════ */
+.hero {
+  min-height: 100vh;
+  background: var(--forest);
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-top: 64px;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 80% at 60% 50%, rgba(42,92,64,0.35) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 40% at 10% 80%, rgba(200,146,42,0.1) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 50% at 90% 10%, rgba(61,139,95,0.12) 0%, transparent 50%);
+}
+
+.hero-lines {
+  position: absolute;
+  inset: 0;
+  opacity: 0.025;
+  background-image: repeating-linear-gradient(
+    90deg, rgba(255,255,255,1) 0px, rgba(255,255,255,1) 1px, transparent 1px, transparent 80px
+  );
+}
+
+.hero-content {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  width: 100%;
+}
+
+
+.hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.hero-eyebrow-line {
+  width: 32px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.hero-eyebrow span {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  color: var(--gold-light);
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.8rem, 5vw, 4.2rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.08;
+  margin-bottom: 12px;
+}
+
+.hero h1 em {
+  font-style: italic;
+  color: var(--sage);
+}
+
+.hero-urdu {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  color: rgba(255,255,255,0.35);
+  font-style: italic;
+  margin-bottom: 28px;
+  direction: rtl;
+}
+
+.hero-desc {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.8;
+  margin-bottom: 40px;
+  max-width: 440px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: var(--gold);
+  color: var(--forest);
+  padding: 13px 28px;
+  border-radius: var(--radius);
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s, transform 0.15s;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background: var(--gold-light);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.7);
+  padding: 13px 28px;
+  border-radius: var(--radius);
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: border-color 0.2s, color 0.2s;
+  display: inline-block;
+}
+
+.btn-secondary:hover {
+  border-color: var(--gold);
+  color: var(--gold-light);
+}
+
+.hero-right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hero-stat-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 6px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  backdrop-filter: blur(4px);
+  transition: border-color 0.2s;
+}
+
+.hero-stat-card:hover { border-color: rgba(200,146,42,0.3); }
+
+.hero-stat-icon {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+  width: 44px;
+  text-align: center;
+}
+
+.hero-stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  line-height: 1;
+}
+
+.hero-stat-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.14em;
+  color: rgba(255,255,255,0.4);
+  text-transform: uppercase;
+  margin-top: 3px;
+}
+
+.hero-stat-note {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.35);
+  margin-top: 2px;
+  font-style: italic;
+}
+
+/* ═══════════════════════════════
+   SECTION BASE
+═══════════════════════════════ */
+.section {
+  padding: 90px 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-full {
+  padding: 90px 40px;
+}
+
+.section-full .section-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.eyebrow-line {
+  width: 24px;
+  height: 1px;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+
+.eyebrow span {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.22em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  color: var(--forest);
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.section-title em {
+  font-style: italic;
+  color: var(--green);
+}
+
+.section-title.light { color: var(--white); }
+.section-title.light em { color: var(--sage); }
+
+.section-sub {
+  font-size: 1rem;
+  color: var(--text-soft);
+  line-height: 1.8;
+  max-width: 580px;
+  margin-bottom: 50px;
+}
+
+.section-sub.light { color: rgba(255,255,255,0.6); }
+
+/* ═══════════════════════════════
+   ABOUT STRIP
+═══════════════════════════════ */
+.about-strip {
+  background: var(--cream-2);
+  border-top: 1px solid rgba(42,92,64,0.1);
+  border-bottom: 1px solid rgba(42,92,64,0.1);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.about-label {
+  display: inline-block;
+  background: var(--green);
+  color: var(--white);
+  font-family: 'DM Mono', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 2px;
+  margin-bottom: 20px;
+}
+
+.about-body p {
+  font-size: 1.02rem;
+  color: var(--text-mid);
+  line-height: 1.85;
+  margin-bottom: 16px;
+}
+
+.about-body p:last-child { margin-bottom: 0; }
+
+.about-quote {
+  border-left: 3px solid var(--gold);
+  padding: 18px 24px;
+  background: var(--white);
+  border-radius: 0 4px 4px 0;
+  margin-top: 28px;
+}
+
+.about-quote p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--forest);
+  line-height: 1.6;
+  margin: 0 !important;
+}
+
+.about-quote cite {
+  display: block;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+  color: var(--text-soft);
+  text-transform: uppercase;
+  margin-top: 10px;
+  font-style: normal;
+}
+
+.about-facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.fact-box {
+  background: var(--white);
+  border: 1px solid rgba(42,92,64,0.1);
+  border-radius: 6px;
+  padding: 24px 20px;
+  text-align: center;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.fact-box:hover {
+  border-color: var(--green);
+  transform: translateY(-3px);
+}
+
+.fact-icon { font-size: 1.6rem; margin-bottom: 10px; }
+
+.fact-val {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--green);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.fact-key {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+  color: var(--text-soft);
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+
+/* ═══════════════════════════════
+   TEAM
+═══════════════════════════════ */
+.team-bg { background: var(--forest); }
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.team-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 6px;
+  padding: 28px 16px;
+  text-align: center;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.team-card:hover {
+  border-color: rgba(200,146,42,0.4);
+  background: rgba(255,255,255,0.07);
+}
+
+.team-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--green);
+  border: 2px solid rgba(200,146,42,0.3);
+  margin: 0 auto 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--gold-light);
+}
+
+.team-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+.team-role {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.14em;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.team-role-urdu {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.3);
+  font-style: italic;
+  direction: rtl;
+}
+
+/* Member cards */
+.members-section { margin-top: 50px; }
+.members-title {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: rgba(255,255,255,0.3);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 10px;
+}
+
+.member-placeholder {
+  background: rgba(255,255,255,0.08);
+  border: 1px dashed rgba(200,146,42,0.4);
+  border-radius: 4px;
+  padding: 14px 10px;
+  text-align: center;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.85);
+  text-transform: uppercase;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.member-placeholder:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(200,146,42,0.7);
+}
+
+/* ═══════════════════════════════
+   PROJECTS
+═══════════════════════════════ */
+.projects-bg { background: var(--cream-2); }
+
+.projects-notice {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(42,92,64,0.1);
+  border: 1px solid rgba(42,92,64,0.2);
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+  color: var(--green);
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.projects-notice::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--green-light);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(42,92,64,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(15,35,24,0.12);
+}
+
+.project-card-top {
+  padding: 24px;
+  background: var(--forest-mid);
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.project-emoji {
+  font-size: 2rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.project-card-top h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.3;
+  margin-bottom: 4px;
+}
+
+.project-status {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.status-planned {
+  background: rgba(200,146,42,0.2);
+  color: var(--gold-light);
+  border: 1px solid rgba(200,146,42,0.3);
+}
+
+.status-upcoming {
+  background: rgba(61,139,95,0.2);
+  color: var(--sage);
+  border: 1px solid rgba(61,139,95,0.3);
+}
+
+.project-card-body {
+  padding: 20px 24px;
+}
+
+.project-card-body p {
+  font-size: 0.92rem;
+  color: var(--text-mid);
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.project-meta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.project-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.project-meta-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.52rem;
+  letter-spacing: 0.12em;
+  color: var(--text-soft);
+  text-transform: uppercase;
+}
+
+.project-meta-val {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--green);
+}
+
+/* ═══════════════════════════════
+   MISSION / VALUES
+═══════════════════════════════ */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.value-card {
+  padding: 32px 26px;
+  background: var(--white);
+  border: 1px solid rgba(42,92,64,0.08);
+  border-top: 3px solid var(--green);
+  border-radius: 4px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.value-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(15,35,24,0.1);
+}
+
+.value-icon { font-size: 1.8rem; margin-bottom: 14px; }
+
+.value-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--forest);
+  margin-bottom: 10px;
+}
+
+.value-card p {
+  font-size: 0.92rem;
+  color: var(--text-soft);
+  line-height: 1.75;
+}
+
+/* ═══════════════════════════════
+   TRANSPARENCY
+═══════════════════════════════ */
+.transparency-bg { background: var(--forest-mid); }
+
+.transparency-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.t-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 6px;
+  padding: 28px 22px;
+  transition: border-color 0.2s;
+}
+
+.t-card:hover { border-color: rgba(200,146,42,0.35); }
+
+.t-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: rgba(200,146,42,0.25);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.t-card h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--gold-light);
+  margin-bottom: 10px;
+}
+
+.t-card p {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.75;
+}
+
+/* ═══════════════════════════════
+   JOIN
+═══════════════════════════════ */
+.join-bg {
+  background: linear-gradient(135deg, var(--green) 0%, var(--forest) 100%);
+}
+
+.join-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.join-info h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.join-info p {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+.join-points {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.join-points li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.6;
+}
+
+.join-points li::before {
+  content: '→';
+  color: var(--gold-light);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.join-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px;
+  padding: 36px;
+}
+
+.join-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.join-breakdown {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 28px;
+}
+
+.join-breakdown li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.65);
+}
+
+.join-breakdown li:last-child { border-bottom: none; }
+
+.join-breakdown .amount {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--gold-light);
+}
+
+.join-total {
+  background: rgba(200,146,42,0.1);
+  border: 1px solid rgba(200,146,42,0.25);
+  border-radius: 4px;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.join-total span:first-child {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+}
+
+.join-total span:last-child {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--gold-light);
+}
+
+.join-note {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.3);
+  text-align: center;
+  margin-top: 14px;
+  text-transform: uppercase;
+}
+
+/* ═══════════════════════════════
+   CONTACT / SOCIAL
+═══════════════════════════════ */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.contact-info h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--forest);
+  margin-bottom: 12px;
+}
+
+.contact-info p {
+  font-size: 0.95rem;
+  color: var(--text-soft);
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+.contact-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--cream-2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.contact-row-text label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.14em;
+  color: var(--text-soft);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.contact-row-text span {
+  font-size: 0.95rem;
+  color: var(--text-mid);
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.social-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--cream-2);
+  border: 1px solid rgba(42,92,64,0.1);
+  border-radius: 6px;
+  padding: 16px 20px;
+  text-decoration: none;
+  transition: border-color 0.2s, transform 0.15s;
+}
+
+.social-card:hover {
+  border-color: var(--green);
+  transform: translateX(4px);
+}
+
+.social-card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.social-fb { background: #1877F2; }
+.social-ig { background: linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045); }
+.social-wa { background: #25D366; }
+.social-tt { background: #000; }
+
+.social-card-text label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.14em;
+  color: var(--text-soft);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.social-card-text span {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.social-card-arrow {
+  margin-left: auto;
+  color: var(--text-soft);
+  font-size: 0.9rem;
+}
+
+/* ═══════════════════════════════
+   FOOTER
+═══════════════════════════════ */
+footer {
+  background: var(--forest);
+  border-top: 1px solid rgba(200,146,42,0.15);
+  padding: 50px 40px 30px;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 50px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  margin-bottom: 28px;
+}
+
+.footer-brand h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+
+.footer-brand .urdu {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.3);
+  font-style: italic;
+  direction: rtl;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.footer-brand p {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.4);
+  line-height: 1.75;
+}
+
+.footer-col h4 {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.18em;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.footer-col ul { list-style: none; }
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.4);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-col ul li a:hover { color: var(--gold-light); }
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-copy {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.2);
+  text-transform: uppercase;
+}
+
+.footer-loc {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.2);
+  text-transform: uppercase;
+}
+
+/* ═══════════════════════════════
+   DIVIDER
+═══════════════════════════════ */
+.gold-divider {
+  width: 48px;
+  height: 2px;
+  background: var(--gold);
+  margin-bottom: 32px;
+}
+
+/* ═══════════════════════════════
+   RESPONSIVE
+═══════════════════════════════ */
+@media (max-width: 900px) {
+  .hero-content { grid-template-columns: 1fr; gap: 40px; }
+  .hero-right { display: grid; grid-template-columns: 1fr 1fr; }
+  .about-grid { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: repeat(3, 1fr); }
+  .values-grid { grid-template-columns: 1fr 1fr; }
+  .transparency-grid { grid-template-columns: 1fr 1fr; }
+  .join-inner { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .footer-top { grid-template-columns: 1fr; gap: 30px; }
+  .nav-links { display: none; }
+  .navbar { padding: 0 20px; }
+  .section { padding: 60px 20px; }
+  .section-full { padding: 60px 20px; }
+}
+
+@media (max-width: 600px) {
+  .hero-content { padding: 60px 20px; }
+  .team-grid { grid-template-columns: 1fr 1fr; }
+  .values-grid { grid-template-columns: 1fr; }
+  .transparency-grid { grid-template-columns: 1fr; }
+  .about-facts { grid-template-columns: 1fr 1fr; }
+  .hero-right { grid-template-columns: 1fr; }
+}
+
+/* ═══════════════════════════════
+   ANIMATIONS
+═══════════════════════════════ */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-left > * {
+  animation: fadeIn 0.7s ease both;
+}
+
+.hero-eyebrow { animation-delay: 0.1s; }
+.hero h1 { animation-delay: 0.2s; }
+.hero-urdu { animation-delay: 0.3s; }
+.hero-desc { animation-delay: 0.4s; }
+.hero-actions { animation-delay: 0.5s; }
+.hero-right { animation: fadeIn 0.7s ease 0.4s both; }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════
+     NAVBAR
+═══════════════════════════════ -->
+<nav class="navbar">
+  <a href="#" class="nav-brand">
+    <svg class="nav-logo" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="18" cy="18" r="17" stroke="#c8922a" stroke-width="1" stroke-dasharray="3 2"/>
+      <path d="M12 26 Q11 18 14 14 Q16 18 12 26Z" fill="#3d8b5f"/>
+      <path d="M9 25 Q7 17 10 12 Q13 17 9 25Z" fill="#3d8b5f" opacity="0.6"/>
+      <path d="M24 26 Q25 18 22 14 Q20 18 24 26Z" fill="#3d8b5f"/>
+      <path d="M27 25 Q29 17 26 12 Q23 17 27 25Z" fill="#3d8b5f" opacity="0.6"/>
+      <polygon points="18,8 16,14 22,14" fill="#c8922a"/>
+      <rect x="15" y="14" width="6" height="8" fill="#c8922a" opacity="0.75"/>
+      <rect x="17" y="18" width="2" height="4" fill="#0f2318"/>
+    </svg>
+    <div class="nav-name">
+      Malhi Goth
+      <span>Welfare Committee</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">اسان بابت</a></li>
+    <li><a href="#team">ٽيم</a></li>
+    <li><a href="#projects">منصوبا</a></li>
+    <li><a href="#values">مشن</a></li>
+    <li><a href="#transparency">شفافيت</a></li>
+    <li><a href="#join" class="nav-cta">شامل ٿيو</a></li>
+  </ul>
+</nav>
+
+<!-- ═══════════════════════════════
+     HERO
+═══════════════════════════════ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-lines"></div>
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-eyebrow">
+        <div class="hero-eyebrow-line"></div>
+        <span>مالهي گوٺ، سنڌ — بحالي 2026</span>
+      </div>
+      <h1>اسانجي ڳوٺ جي خدمت<br><em>گڏجي.</em></h1>
+      <div class="hero-urdu">مالہی گوٹھ فلاحي ڪمیٹی</div>
+      <p class="hero-desc">مالهي گوٺ جي نوجوانن پاران ٻيهر جيئرو ڪيل هڪ ڪم ڪندڙ- فلاح ڪميٽي، جيڪا اسان جي ڳوٺ جي خدمت ڪرڻ، اسان جي خاندانن جي مدد ڪرڻ، ۽ ايندڙ نسلن لاءِ ڪجهه مستقل ٺاهڻ لاءِ آهي.</p>
+      <div class="hero-actions">
+        <a href="#join" class="btn-primary">ڪميٽي ۾ شامل ٿيو</a>
+        <a href="#projects" class="btn-secondary">اسان جون رٿائون</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-stat-card">
+        <div class="hero-stat-icon">📍</div>
+        <div>
+          <div class="hero-stat-num">Malhi Goth</div>
+          <div class="hero-stat-label">سکر ۽ شڪارپور جي وچ ۾</div>
+          <div class="hero-stat-note">سنڌ، پاڪستان</div>
+        </div>
+      </div>
+      <div class="hero-stat-card">
+        <div class="hero-stat-icon">🕐</div>
+        <div>
+          <div class="hero-stat-num">2026</div>
+          <div class="hero-stat-label">بحالي جو سال</div>
+          <div class="hero-stat-note">هڪ تاريخي ورثي کي ٻيهر زندہ ڪرڻ</div>
+        </div>
+      </div>
+      <div class="hero-stat-card">
+        <div class="hero-stat-icon">💰</div>
+        <div>
+          <div class="hero-stat-num">PKR 500</div>
+          <div class="hero-stat-label">گهٽ ۾ گهٽ ماهوار تعاون</div>
+          <div class="hero-stat-note">هر ميمبر لاءِ، 10 تاريخ تائين</div>
+        </div>
+      </div>
+      <div class="hero-stat-card">
+        <div class="hero-stat-icon">🌱</div>
+        <div>
+          <div class="hero-stat-num">5 Projects</div>
+          <div class="hero-stat-label">پهريون سال لاءِ منصوبه بندي ڪيل</div>
+          <div class="hero-stat-note">بنياد کان شروع ڪندي</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+     ABOUT
+═══════════════════════════════ -->
+<div class="about-strip section-full" id="about">
+  <div class="section-inner">
+    <div class="about-grid section">
+      <div class="about-body">
+        <span class="about-label">اسان ڪير آهيون</span>
+        <h2 class="section-title">هڪ ڳوٺ جيڪو <em>ڏيڻ</em> جي تاريخ رکي ٿو</h2>
+        <div class="gold-divider"></div>
+        <p>مالهي گوٺ سنڌ جي دل ۾ سکر ۽ شڪارپور جي شهرن جي وچ ۾ واقع ڳوٺ آهي. اسان جي ڳوٺ جي هڪ ڊگھي روايت آهي — اسان جا بزرگ اڳ ۾ هڪ باقاعده رجسٽرڊ فلاح ڪميٽي ٺاهي چڪا آهن جنهن سالن تائين هن ڪميونٽي جي خدمت ڪئي.</p>
+        <p>وقت سان گڏ اهو ادارو سست ٿي ويو جڏهن اسان جا بزرگ عمر رسيد ٿيا ۽ نوجوان نسل ڪم ۽ تعليم لاءِ شهرن ڏانهن هليو ويو. پر رجسٽريشن، نالو، ۽ روح ڪڏهن به مري نه سگھيا.</p>
+        <p>2026 ۾، مالهي گوٺ جي نوجوانن جو هڪ گروپ فيصلو ڪيو ته هاڻي ان کي واپس آڻڻ جو وقت آهي — صحيح جوڙجڪ، مڪمل شفافيت، ۽ واضح منصوبو سان جيڪو اسان تعمير ڪرڻ چاهيون ٿا.</p>
+        <div class="about-quote">
+          <p>"اسان جي بزرگن ڪجهه حقيقي ٺاهيو. اسان جو گهٽ ۾ گهٽ ڪم اهو آهي ته ان ڪم کي مرڻ نه ڏيون — ۽ ان تي تعمير ڪريون."</p>
+          <cite>— باني ميمبر، مالهي گوٺ 2026</cite>
+        </div>
+      </div>
+      <div class="about-facts">
+        <div class="fact-box">
+          <div class="fact-icon">🏘️</div>
+          <div class="fact-val">1</div>
+          <div class="fact-key">ڳوٺ جيڪو اسان خدمت ڪريون ٿا</div>
+        </div>
+        <div class="fact-box">
+          <div class="fact-icon">👥</div>
+          <div class="fact-val">5+</div>
+          <div class="fact-key">مرڪزي باني</div>
+        </div>
+        <div class="fact-box">
+          <div class="fact-icon">🎯</div>
+          <div class="fact-val">5</div>
+          <div class="fact-key">منصوبه بندي ڪيل منصوبا</div>
+        </div>
+        <div class="fact-box">
+          <div class="fact-icon">📋</div>
+          <div class="fact-val">100%</div>
+          <div class="fact-key">شفاف اڪائونٽس</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════
+     TEAM
+═══════════════════════════════ -->
+<div class="team-bg section-full" id="team">
+  <div class="section-inner">
+    <div class="section" style="padding-bottom: 0;">
+      <div class="eyebrow">
+        <div class="eyebrow-line"></div>
+        <span>اسان جا ماڻهو</span>
+      </div>
+      <h2 class="section-title light">انتظامي <em>ڪميٽي</em></h2>
+      <div class="gold-divider"></div>
+      <p class="section-sub light">هر ميمبر ذميوار آهي. هر ڪردار واضح طريقي سان مقرر ڪيو ويو آهي. ڪو به شخص اڪيلو ڪجهھ به ڪنٽرول نٿو ڪري.</p>
+
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-avatar">M</div>
+          <div class="team-name">Mansoor Ahmed</div>
+          <div class="team-role">President</div>
+          <div class="team-role-urdu">صدر</div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">S</div>
+          <div class="team-name">Muhammad Shoaib</div>
+          <div class="team-role">Vice President</div>
+          <div class="team-role-urdu">نائب صدر</div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">Y</div>
+          <div class="team-name">Muhammad Yasir</div>
+          <div class="team-role">General Secretary</div>
+          <div class="team-role-urdu">جنرل سیکرٹری</div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">S</div>
+          <div class="team-name">Muhammad Shoaib</div>
+          <div class="team-role">Treasurer</div>
+          <div class="team-role-urdu">خزانچی</div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">F</div>
+          <div class="team-name">Faiz Ahmed</div>
+          <div class="team-role">Social Media Manager</div>
+          <div class="team-role-urdu">سوشل میڈیا</div>
+        </div>
+      </div>
+
+      <div class="members-section">
+        <div class="members-title">سرگرم ميمبر — وڌندي</div>
+        <div class="members-grid">
+          <div class="member-placeholder">Mudasir Ali</div>
+          <div class="member-placeholder">Waheed Qamar</div>
+          <div class="member-placeholder">M. Younis</div>
+          <div class="member-placeholder">M. Asim</div>
+          <div class="member-placeholder">M. Faisal</div>
+          <div class="member-placeholder">Ab. Wahab</div>
+          <div class="member-placeholder">M. Ameen</div>
+          <div class="member-placeholder">Shahzain</div>
+
+          <div class="member-placeholder">توھانجو نالو؟</div>
+          <a href="https://form.jotform.com/261386281560055" class="member-placeholder" style="display: inline-block; text-decoration: none; cursor: pointer;">شامل ٿيو →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════
+     PROJECTS
+═══════════════════════════════ -->
+<div class="projects-bg section-full" id="projects">
+  <div class="section-inner">
+    <div class="section">
+      <div class="eyebrow">
+        <div class="eyebrow-line"></div>
+        <span>پهريون سال جون رٿائون</span>
+      </div>
+      <h2 class="section-title">اسان جا منصوبه بندي ڪيل <em>منصوبا</em></h2>
+      <div class="gold-divider"></div>
+      <div class="projects-notice">منصوبه بندي ٿيل — 2026 کان شروع — اڃا ڪو منصوبو مڪمل ناهي</div>
+      <p class="section-sub">اسين 0 کان شروع ڪري رهيا آهيون ۽ اسان هن کي سچائي سان چوڻ تي فخر محسوس ڪندا آهيون. اهي منصوبا آهن جيڪي اسان پنهنجي پهرئين سال لاءِ منصوبه بندي ڪيا آهن. جيئن ئي هر هڪ مڪمل ٿيندو، هي صفحو حقيقي تصويرن ۽ نتيجن سان اپڊيٽ ڪيو ويندو.</p>
+
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-card-top">
+            <div class="project-emoji">🧹</div>
+            <div>
+              <h3>صفائي مهم</h3>
+              <span class="project-status status-planned">منصوبه بندي ٿيل</span>
+            </div>
+          </div>
+          <div class="project-card-body">
+            <p> گوٺ جي سطح تي هڪ هم آهنگ صفائي مهم. رضاڪار ۽ ڪرائي تي وٺيل مزدور مکيا سڙڪون، کليل علائقا، ۽ ڪچري وارا هنڌ صاف ڪندا. نتيجن کي برقرار رکڻ لاءِ هڪ باقاعده ماهوار مهم.</p>
+            <div class="project-meta">
+              <div class="project-meta-item">
+                <span class="project-meta-label">اندازو قيمت</span>
+                <span class="project-meta-val">PKR 2,000–5,000</span>
+              </div>
+              <div class="project-meta-item">
+                <span class="project-meta-label">فنڊ</span>
+                <span class="project-meta-val">منصوبي جو فنڊ</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card-top">
+            <div class="project-emoji">🌳</div>
+            <div>
+              <h3>پودا لڳائڻ جي مهم</h3>
+              <span class="project-status status-planned">منصوبه بندي ٿيل</span>
+            </div>
+          </div>
+          <div class="project-card-body">
+            <p>ڳوٺ ۾ 50-70 وڻ لڳايو — رستن، کليل علائقن، ۽ ڳوٺ جي داخلي حصي تي. ڇانو، صاف هوا، ۽ خوبصورتي سڄي ڳوٺ لاءِ. اسان جو سڀ کان وڌيڪ فائديمند منصوبو.</p>
+            <div class="project-meta">
+              <div class="project-meta-item">
+                <span class="project-meta-label">اندازو قيمت</span>
+                <span class="project-meta-val">PKR 3,000–8,000</span>
+              </div>
+              <div class="project-meta-item">
+                <span class="project-meta-label">وڻ</span>
+                <span class="project-meta-val">50–70</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card-top">
+            <div class="project-emoji">💡</div>
+            <div>
+              <h3>سولر اسٽريٽ لائيٽس</h3>
+              <span class="project-status status-upcoming">ايندڙ</span>
+            </div>
+          </div>
+          <div class="project-card-body">
+            <p>مکيا ڳوٺ جي رستن تي سولر پاور وارا اسٽريٽ لائيٽ لڳايو. ڪو بجلي بل نه، ڪو وائرنگ خرچ نه، گهٽ سار سنڀال. رات جو سڄي ڪميونٽي لاءِ محفوظ رستا.</p>
+            <div class="project-meta">
+              <div class="project-meta-item">
+                <span class="project-meta-label">اندازو قيمت</span>
+                <span class="project-meta-val">PKR 30,000–50,000</span>
+              </div>
+              <div class="project-meta-item">
+                <span class="project-meta-label">يونٽ</span>
+                <span class="project-meta-val">3 لائيٽس</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card-top">
+            <div class="project-emoji">🚿</div>
+            <div>
+              <h3>نڪاسي / نالي جي صفائي</h3>
+              <span class="project-status status-planned">منصوبه بندي ٿيل</span>
+            </div>
+          </div>
+          <div class="project-card-body">
+            <p>ڳوٺ جي مکيا نالن جي مناسب نڪاسي ۽ گندگيءَ جي صفائي. بلاڪ ٿيل نالا ٻوڏ ۽ بيمارين جو سبب بڻجن ٿا. 1–2 ڏينهن جي منظم مهم مزدورن ۽ ميمبرن جي رضاڪارن سان.</p>
+            <div class="project-meta">
+              <div class="project-meta-item">
+                <span class="project-meta-label">اندازو قيمت</span>
+                <span class="project-meta-val">PKR 2,000–8,000</span>
+              </div>
+              <div class="project-meta-item">
+                <span class="project-meta-label">مدت</span>
+                <span class="project-meta-val">1–2 ڏينهن</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+  <div class="project-card-top">
+    <div class="project-emoji">⚒️</div>
+    <div>
+      <h3>قبر کوٽڻ جو سامان</h3>
+      <span class="project-status status-upcoming">ايندڙ</span>
+    </div>
+  </div>
+  <div class="project-card-body">
+    <p>دفن جي وقت ڳوٺ لاءِ ضروري سامان ۽ اوزار خريد ڪرڻ، ته جيئن خاندانن لاءِ عمل آسان ۽ باوقار ٿئي.</p>
+    <div class="project-meta">
+      <div class="project-meta-item">
+        <span class="project-meta-label">اندازو قيمت</span>
+        <span class="project-meta-val">PKR 5000-10,000</span>
+      </div>
+      <div class="project-meta-item">
+        <span class="project-meta-label">مقصد</span>
+        <span class="project-meta-val">ڪميونٽي جي مدد</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="project-card">
+  <div class="project-card-top">
+    <div class="project-emoji">🪑</div>
+    <div>
+      <h3>ڪميونٽي تقريب جا سامان</h3>
+      <span class="project-status status-upcoming">ايندڙ</span>
+    </div>
+  </div>
+  <div class="project-card-body">
+    <p>گھٽ خرچ تي ڳوٺ جي تقريبن ۽ گڏجاڻين لاءِ ڪارپٽ، جگ، گلاس، ۽ ٻيا ضروري سامان خريد ڪرڻ، خاندانن کي هر موقعي تي سامان ڪرائي تي وٺڻ جو بار گهٽائڻ ۾ مدد.</p>
+    <div class="project-meta">
+      <div class="project-meta-item">
+        <span class="project-meta-label">اندازو قيمت</span>
+        <span class="project-meta-val">PKR 25,000–50,000</span>
+      </div>
+      <div class="project-meta-item">
+        <span class="project-meta-label">فائدو</span>
+        <span class="project-meta-val">ڳوٺ جي گڏيل استعمال لاءِ</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════
+     VALUES / MISSION
+═══════════════════════════════ -->
+<div id="values">
+  <div class="section">
+    <div class="eyebrow">
+      <div class="eyebrow-line"></div>
+      <span>اسان کي ڪهڙو هلائي ٿو</span>
+    </div>
+    <h2 class="section-title">اسان جو <em>مشن ۽ قدر</em></h2>
+    <div class="gold-divider"></div>
+    <p class="section-sub">اسين ڪا خيراتي تنظيم نه آهيون — اسان هڪ ڪميونٽي آهيون. هر قدم جيڪو اسين کڻون ٿا مالهي گوٺ جي ماڻهن لاءِ آهي، مالهي گوٺ جي ماڻهن پاران. گڏجي، توهان جي مدد مستقل تبديلي آڻي سگهي ٿي.</p>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon">🤝</div>
+        <h3>ڪميونٽي پهرين</h3>
+        <p>هر فيصلي جو مرڪز اهي ماڻهو آهن جيڪي مالهي گوٺ ۾ رهن ٿا. ڪو سياست، ڪو ذاتي ايجنڊا نه — صرف اسانجي ڳوٺ جي سچي خدمت.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">📊</div>
+        <h3>مڪمل شفافيت</h3>
+        <p>هر روپيو گڏ ڪيل ۽ خرچ ڪيل هر مهيني سڀني ميمبرن تائين رپورٽ ڪيو ويندو. ڪوبه ڳجهو نه. هرڪو ڪڏهن به اسان جا اڪائونٽ ڏسي سگهي ٿو.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">📐</div>
+        <h3>جوڙيل ۽ ذميوار</h3>
+        <p>اسان وٽ واضح آئين، چونڊيل ڪردار، ۽ مقرر ٿيل عمل آهن. ڪو به واحد ماڻهو فنڊ يا فيصلا اڪيلو نه ڪنٽرول ڪري. سڀ ڪجهه گڏيل آهي.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🌱</div>
+        <h3>طويل المدت سوچ</h3>
+        <p>اسين ايندڙ نسل لاءِ تعمير ڪري رهيا آهيون، صرف اڄ لاءِ نه. هر منصوبي کي ڳوٺ تي ان جي پائيدار اثر لاءِ چونڊيو ويو آهي.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">⚖️</div>
+        <h3>ٻيھرائي ناهي</h3>
+        <p>فلاح ۽ مدد اصلي ضرورت جي بنياد تي ڏني ويندي — نه ذات، قبيلو، يا ذاتي واسطن جي بنياد تي. اسان جي نظر ۾ ڳوٺ جا سڀ ماڻهو برابر آهن.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🕌</div>
+        <h3>صدقه جاريه</h3>
+        <p>هر منصوبو جيڪو اسين مڪمل ڪريون — هر وڻ جيڪو لڳايو وڃي، هر لائيٽ جيڪا نصب ڪئي وڃي — اهو هڪ جاري صدقي جو عمل آهي جيڪو سڄي ڪميونٽي کي فائدو ڏئي ٿو، ۽ هن زندگي کان پوءِ به ثواب سان جاري رهندو آهي.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════
+     TRANSPARENCY
+═══════════════════════════════ -->
+<div class="transparency-bg section-full" id="transparency">
+  <div class="section-inner">
+    <div class="section">
+      <div class="eyebrow">
+        <div class="eyebrow-line"></div>
+        <span>اسان ڪيئن ڪم ڪندا آهيون</span>
+      </div>
+      <h2 class="section-title light">ڀروسي تي <em>بنياد</em></h2>
+      <div class="gold-divider"></div>
+      <p class="section-sub light">گهڻيون ڳوٺاڻيون ڪميٽيون ڇو ناڪام ٿين ٿيون؟ اهو اعتماد وڃائڻ جي ڪري. اسين پهرين ڏينهن کان ئي هڪ سخت نظام سان هن کي روڪيندا آهيون جيڪو هر ڪو ڏسي ۽ تصديق ڪري سگهي ٿو.</p>
+      <div class="transparency-grid">
+        <div class="t-card">
+          <div class="t-num">01</div>
+          <h4>هر ادائيگي لاءِ رسيد</h4>
+          <p>هر ميمبر کي انهن جي تعاون لاءِ لکيل يا فوٽو رسيد ملي ٿي. بغير رڪارڊ جي ڪا رقم گڏ نه ڪئي ويندي.</p>
+        </div>
+        <div class="t-card">
+          <div class="t-num">02</div>
+          <h4>ماهوار واٽس اپ رپورٽ</h4>
+          <p>خزانچي هر مهيني مڪمل ليجر جي فوٽو سڀني ميمبرن سان شيئر ڪندو — آمدني، خرچ، ۽ بند توازن. ڪجھه لڪيل ناهي.</p>
+        </div>
+        <div class="t-card">
+          <div class="t-num">03</div>
+          <h4>ٻن دستخطن وارو بينڪ اڪائونٽ</h4>
+          <p>ڪو به واحد ماڻهو فنڊ کي اڪيلو ڪڍي نٿو سگهي. صدر ۽ خزانچي ٻئي هر ٽرانزيڪشن جي تصديق ڪرڻا پوندا.</p>
+        </div>
+        <div class="t-card">
+          <div class="t-num">04</div>
+          <h4>  ٽي ڪوٽس جو اصول</h4>
+          <p>ڪابه به منصوبي جيڪا PKR 5,000 کان مٿي هجي، ان لاءِ ٽي الڳ ٺيڪيدار ڪوٽس گهرجن. اسين هميشه سڀ کان مناسب چونڊون ٿا.</p>
+        </div>
+        <div class="t-card">
+          <div class="t-num">05</div>
+          <h4>پهرين ۽ بعد ۾ دستاويز</h4>
+          <p>هر منصوبي جو اڳ، دوران، ۽ بعد ۾ فوٽو ڪڍيو ويندو. نتيجا عوامي طور تي شيئر ڪيا ويندا — هن سائيٽ تي ۽ سوشل ميڊيا تي.</p>
+        </div>
+        <div class="t-card">
+          <div class="t-num">06</div>
+          <h4>ساليانو عوامي آڊٽ</h4>
+          <p>هر سال هڪ مڪمل آڊٽ ڪئي ويندي ۽ سڀني سان شيئر ڪئي ويندي — ميمبرن ۽ وسيع ڳوٺاڻن ڪميونٽي ٻنهي سان.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════
+     JOIN
+═══════════════════════════════ -->
+<div class="join-bg section-full" id="join">
+  <div class="section-inner">
+    <div class="section">
+      <div class="join-inner">
+        <div class="join-info">
+          <div class="eyebrow">
+            <div class="eyebrow-line" style="background:var(--gold-light);"></div>
+            <span style="color:var(--gold-light);">ممبر بڻجو</span>
+          </div>
+          <h2>ڪجهه <em style="font-style:italic; color:var(--sage);">حقيقت</em> جو حصو ٿيو</h2>
+          <p>مالهي گوٺ فلاح ڪميٽي ڪنهن به شخص لاءِ کليل آهي جنهن جو اسانجي ڳوٺ سان اصل لاڳاپو هجي. چاهي توهان اتي رهو ٿا، ڪراچي يا پرڏيهي ۾ — توهان تعاون ڪري سگهو ٿا ۽ ان جو حصو بڻجي سگهو ٿا.</p>
+          <ul class="join-points">
+            <li>مالهي گوٺ ۾ ڄايل يا هتي خاندان هجي</li>
+            <li>گهٽ ۾ گهٽ عمر 18 سال</li>
+            <li>گهٽ ۾ گهٽ PKR 500/ماهه تي تيار</li>
+            <li>ماهوار گڏجاڻين ۾ شرڪت ڪريو (ذاتي يا آن لائن)</li>
+            <li>ڪميٽي جي آئين جي پابندي ڪريو</li>
+            <li>سڀني ڪم سان ايمانداري ۽ ڳوٺ جي مفاد کي پهرين ترجيح ڏيو</li>
+          </ul>
+        </div>
+        <div class="join-card">
+          <h3>ماهوار فنڊ جو تقسيم</h3>
+          <ul class="join-breakdown">
+            <li>
+              <span>🏗 منصوبي جو فنڊ (60%)</span>
+              <span class="amount">PKR 300</span>
+            </li>
+            <li>
+              <span>🤝 بهترائي فنڊ (20%)</span>
+              <span class="amount">PKR 100</span>
+            </li>
+            <li>
+              <span>📚 تعليمي فنڊ (10%)</span>
+              <span class="amount">PKR 50</span>
+            </li>
+            <li>
+              <span>🔒 ريزرو فنڊ (5%)</span>
+              <span class="amount">PKR 25</span>
+            </li>
+            <li>
+              <span>⚙️ آپريشنز (5%)</span>
+              <span class="amount">PKR 25</span>
+            </li>
+          </ul>
+          <div class="join-total">
+            <span>توهانجو ماهوار تعاون</span>
+            <span>PKR 500</span>
+          </div>
+          <p class="join-note">تعاون ميمبرشپ سان گڏ وڌي ٿو. هر ميمبر اثر وڌائيندو.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════
+     CONTACT & SOCIAL
+═══════════════════════════════ -->
+<div id="contact">
+  <div class="section">
+    <div class="eyebrow">
+      <div class="eyebrow-line"></div>
+      <span>Get In Touch</span>
+    </div>
+    <h2 class="section-title">Contact & <em>Follow Us</em></h2>
+    <div class="gold-divider"></div>
+    <p class="section-sub">واٽس اپ تي اسان سان رابطو ڪريو يا اسان جي صفحن جي پيروي ڪريو ته هر منصوبو، هر خرچ، ۽ هر قدم تي اپڊيٽ رهي.</p>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>رابطا تفصيل</h3>
+        <p>ممبرشپ جي سوالن، چندي، يا ڪميٽي بابت ڪنهن به سوال لاءِ — سڌو اسان جي صدر يا سيڪريٽري سان رابطو ڪريو.</p>
+        <div class="contact-detail">
+          <div class="contact-row">
+            <div class="contact-icon">📍</div>
+            <div class="contact-row-text">
+              <label>مقام</label>
+              <span>مالهي گوٺ، سکر ۽ شڪارپور جي وچ ۾، سنڌ</span>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-icon">👤</div>
+            <div class="contact-row-text">
+              <label>صدر</label>
+              <span>Mansoor Ahmed</span>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-icon">📝</div>
+            <div class="contact-row-text">
+              <label>جنرل سيڪريٽري</label>
+              <span>Muhammad Yasir</span>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-icon">💬</div>
+            <div class="contact-row-text">
+              <label>واٽس اپ</label>
+              <span>03083471221</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.5rem; font-weight:600; color:var(--forest); margin-bottom:16px;">اسان جي ڪم جي پيروي ڪريو</h3>
+        <div class="social-links">
+          <a href="#" class="social-card">
+            <div class="social-card-icon social-fb">📘</div>
+            <div class="social-card-text">
+              <label>فيس بڪ پيج</label>
+              <span>@MalhiGothWelfare</span>
+            </div>
+            <span class="social-card-arrow">→</span>
+          </a>
+          <a href="#" class="social-card">
+            <div class="social-card-icon social-ig">📸</div>
+            <div class="social-card-text">
+              <label>انسٽاگرام</label>
+              <span>@MalhiGothWelfare</span>
+            </div>
+            <span class="social-card-arrow">→</span>
+          </a>
+          <a href="#" class="social-card">
+            <div class="social-card-icon social-wa">💬</div>
+            <div class="social-card-text">
+              <label>واٽس اپ چينل</label>
+              <span>Malhi Goth Welfare Updates</span>
+            </div>
+            <span class="social-card-arrow">→</span>
+          </a>
+          <a href="#" class="social-card">
+            <div class="social-card-icon social-tt">🎵</div>
+            <div class="social-card-text">
+              <label>ٽِڪ ٽاڪ</label>
+              <span>@MalhiGothWelfare</span>
+            </div>
+            <span class="social-card-arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════
+     FOOTER
+═══════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3>مالهي گوٺ فلاح ڪميٽي</h3>
+        <span class="urdu">مالہی گوٹھ فلاحی کمیٹی</span>
+        <p>هڪ ڪميونٽي-ذريعي فلاح ڪميٽي جيڪا مالهي گوٺ ڳوٺ، سنڌ، پاڪستان جي خدمت ڪري ٿي. شفافيت، ذميواري، ۽ اسان جي ماڻهن لاءِ سچي خيال تي ٺهيل.</p>
+      </div>
+      <div class="footer-col">
+        <h4>هلڻ</h4>
+        <ul>
+          <li><a href="#about">اسان بابت</a></li>
+          <li><a href="#team">اسان جي ٽيم</a></li>
+          <li><a href="#projects">منصوبا</a></li>
+          <li><a href="#values">مشن</a></li>
+          <li><a href="#transparency">شفافيت</a></li>
+          <li><a href="#join">شامل ٿيو</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>پيروي تي</h4>
+        <ul>
+          <li><a href="#">فيس بڪ</a></li>
+          <li><a href="#">انسٽاگرام</a></li>
+          <li><a href="#">واٽس اپ چينل</a></li>
+          <li><a href="#">ٽِڪ ٽاڪ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 مالهي گوٺ فلاح ڪميٽي — سڀ حق محفوظ</span>
+      <span class="footer-loc">📍 مالهي گوٺ، سنڌ، پاڪستان</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
